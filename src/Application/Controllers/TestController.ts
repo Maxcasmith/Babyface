@@ -1,4 +1,4 @@
-import { get, post, iRouterRequest } from "../routing";
+import { get, post, iRouterRequest } from "../router";
 
 export default class TestController
 {
