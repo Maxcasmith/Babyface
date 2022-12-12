@@ -1,6 +1,6 @@
 import { Express, Request, Response } from "express";
 import Router, { routes, iRequest } from "./Application/router";
-import { controllers } from "./Application";
+import { controllers } from "./Application/Controllers";
 
 const router = new Router(routes);
 
