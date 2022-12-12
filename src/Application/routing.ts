@@ -7,6 +7,14 @@ export type iRequest = {
   files?:any;
 }
 
+export type iRouterRequest = {
+  query?:any;
+  body?:any;
+  headers?:any;
+  params?:any;
+  files?:any;
+}
+
 export const routes:Array<any> = [];
 
 export function get(route:string) {
@@ -51,7 +59,7 @@ export default class Router
       else return (r.route == path && r.method == method) || r.route == "*";
     });
 
-    const request = {query, body, headers, params, files};
+    const request:iRouterRequest = {query, body, headers, params, files};
     
     if (!route) throw {
       status: 404,
